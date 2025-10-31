@@ -48,6 +48,17 @@ export default function HomePage() {
             <div className="mt-8 text-sm text-muted-foreground">
               <p>LIC# S.0197614.LLC</p>
               <p>Dr Duffy Beazer Homes Group</p>
+              <p className="mt-2">
+                <a
+                  href="https://maps.google.com/?q=4670+S+Fort+Apache+Rd,+Las+Vegas,+NV+89147"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-foreground flex items-center justify-center gap-1"
+                >
+                  <MapPin className="w-4 h-4" />
+                  4670 S Fort Apache Rd, Las Vegas, NV 89147
+                </a>
+              </p>
             </div>
           </div>
         </div>
@@ -138,7 +149,7 @@ export default function HomePage() {
                     desert setting.
                   </p>
                   <Button variant="outline" asChild>
-                    <a href="#contact">Learn More</a>
+                    <a href="/communities">View Henderson Communities</a>
                   </Button>
                 </div>
               </div>
@@ -168,7 +179,7 @@ export default function HomePage() {
                     around the globe, Las Vegas offers convenience, opportunity, and excitement.
                   </p>
                   <Button variant="outline" asChild>
-                    <a href="#contact">Learn More</a>
+                    <a href="/communities">View Las Vegas Communities</a>
                   </Button>
                 </div>
               </div>
@@ -198,7 +209,7 @@ export default function HomePage() {
                     and a relaxed pace of life, Boulder City offers a refreshing alternative.
                   </p>
                   <Button variant="outline" asChild>
-                    <a href="#contact">Learn More</a>
+                    <a href="/communities">View All Communities</a>
                   </Button>
                 </div>
               </div>
@@ -228,10 +239,15 @@ export default function HomePage() {
                     choice for families, retirees, and anyone seeking balance.
                   </p>
                   <Button variant="outline" asChild>
-                    <a href="#contact">Learn More</a>
+                    <a href="/communities">View All Communities</a>
                   </Button>
                 </div>
               </div>
+            </div>
+            <div className="text-center mt-8">
+              <Button size="lg" asChild>
+                <a href="/communities">View All Beazer Homes Communities</a>
+              </Button>
             </div>
           </div>
         </div>
@@ -339,6 +355,17 @@ export default function HomePage() {
               <p>Dr. Jan Duffy | Buyers Agent Beazer Homes</p>
               <p>Dr Duffy Beazer Homes Group</p>
               <p>LIC# S.0197614.LLC</p>
+              <p className="mt-4">
+                <a 
+                  href="https://maps.google.com/?q=4670+S+Fort+Apache+Rd,+Las+Vegas,+NV+89147"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline hover:no-underline flex items-center justify-center gap-1"
+                >
+                  <MapPin className="w-4 h-4" />
+                  4670 S Fort Apache Rd, Las Vegas, NV 89147
+                </a>
+              </p>
               <p className="mt-2">
                 <a 
                   href="mailto:DrDuffySells@DuffyRealtyOfLasVegas.com" 
