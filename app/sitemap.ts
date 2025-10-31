@@ -87,6 +87,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.7,
     },
+    {
+      url: `${baseUrl}/tips-buying-new-construction`,
+      lastModified,
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
     ...locationPages,
     ...communityPages,
   ]

@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button'
 import { Phone, Mail, Calendar, Award, Home, Users, MapPin } from 'lucide-react'
 import Image from 'next/image'
 import { generateOrganizationSchema, generatePersonSchema, generateRealEstateAgentSchema, generateLocalBusinessSchema } from '@/lib/schema/structured-data'
+import { StructuredData } from '@/components/StructuredData'
 
 export default function HomePage() {
   const organizationSchema = generateOrganizationSchema()
@@ -13,22 +14,10 @@ export default function HomePage() {
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(realEstateAgentSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
-      />
+      <StructuredData data={organizationSchema} />
+      <StructuredData data={personSchema} />
+      <StructuredData data={realEstateAgentSchema} />
+      <StructuredData data={localBusinessSchema} />
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
       <section className="relative bg-gradient-to-b from-primary/10 via-background to-background py-20 md:py-32">
@@ -155,6 +144,8 @@ export default function HomePage() {
                     alt="Henderson, Nevada"
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-300"
+                    loading="lazy"
+                    sizes="(max-width: 768px) 100vw, 50vw"
                     onError={(e) => {
                       const target = e.target as HTMLImageElement;
                       target.style.display = 'none';
@@ -215,6 +206,8 @@ export default function HomePage() {
                     alt="Boulder City, Nevada"
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-300"
+                    loading="lazy"
+                    sizes="(max-width: 768px) 100vw, 50vw"
                     onError={(e) => {
                       const target = e.target as HTMLImageElement;
                       target.style.display = 'none';
@@ -245,6 +238,8 @@ export default function HomePage() {
                     alt="Mesquite, Nevada"
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-300"
+                    loading="lazy"
+                    sizes="(max-width: 768px) 100vw, 50vw"
                     onError={(e) => {
                       const target = e.target as HTMLImageElement;
                       target.style.display = 'none';
@@ -420,8 +415,8 @@ export default function HomePage() {
               <p className="mt-4">
                 <a 
                   href="https://maps.google.com/?q=4670+S+Fort+Apache+Rd,+Las+Vegas,+NV+89147"
-                  target="_blank"
-                  rel="noopener noreferrer"
+              target="_blank"
+              rel="noopener noreferrer"
                   className="underline hover:no-underline flex items-center justify-center gap-1"
                 >
                   <MapPin className="w-4 h-4" />
@@ -494,6 +489,9 @@ export default function HomePage() {
                     </li>
                     <li>
                       <a href="/new-construction-process" className="hover:underline">New Construction Process</a>
+                    </li>
+                    <li>
+                      <a href="/tips-buying-new-construction" className="hover:underline">Tips For Buying New Construction</a>
                     </li>
                     <li>
                       <a href="/faq" className="hover:underline">FAQ</a>

@@ -7,17 +7,21 @@ import './globals.css'
 const geistSans = Geist({
   variable: '--font-geist-sans',
   subsets: ['latin'],
+  display: 'swap',
+  preload: true,
 })
 
 const geistMono = Geist_Mono({
   variable: '--font-geist-mono',
   subsets: ['latin'],
+  display: 'swap',
+  preload: false, // Only preload primary font
 })
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.duffyrealtyoflasvegas.com'),
-  title: 'Dr. Jan Duffy - Award Winning Buyer Agent | Beazer Homes Las Vegas',
-  description: 'Dr. Jan Duffy is the Award Winning Buyer Agent for Beazer Homes in Las Vegas. Find your perfect new construction home in Henderson, Las Vegas, Boulder City, and Mesquite.',
+  title: 'Dr. Jan Duffy - Award Winning Buyer Agent | Beazer Homes Las Vegas, NV',
+  description: 'Dr. Jan Duffy is the Award Winning Buyer Agent for Beazer Homes in Las Vegas, Nevada. Find new construction homes, floor plans, and communities. Expert guidance for buying Beazer Homes in Las Vegas, Henderson, and surrounding areas.',
   alternates: {
     canonical: 'https://www.duffyrealtyoflasvegas.com',
   },
@@ -59,12 +63,12 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {/* Google tag (gtag.js) */}
+        {/* Google tag (gtag.js) - Loaded with lowest priority */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-1JC6VLTL8P"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
         />
-        <Script id="google-analytics" strategy="afterInteractive">
+        <Script id="google-analytics" strategy="lazyOnload">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}

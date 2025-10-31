@@ -269,6 +269,7 @@ export default function CommunitiesPage() {
                   <a href="/buyers-guide" className="text-primary hover:underline text-sm">Buyer's Guide →</a>
                   <a href="/first-time-buyers" className="text-primary hover:underline text-sm">First-Time Buyers →</a>
                   <a href="/new-construction-process" className="text-primary hover:underline text-sm">Process Timeline →</a>
+                  <a href="/tips-buying-new-construction" className="text-primary hover:underline text-sm">Buying Tips →</a>
                 </div>
               </div>
               <div className="bg-card p-6 rounded-lg border border-border">

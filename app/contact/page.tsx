@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button'
 import { Phone, Mail, Calendar, MapPin, Clock } from 'lucide-react'
 import Link from 'next/link'
 import { generateLocalBusinessSchema, generateBreadcrumbSchema } from '@/lib/schema/structured-data'
+import { StructuredData } from '@/components/StructuredData'
 
 export const metadata: Metadata = {
   title: 'Contact Dr. Jan Duffy | Beazer Homes Buyer Agent Las Vegas',
@@ -27,14 +28,8 @@ export default function ContactPage() {
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-      />
+      <StructuredData data={localBusinessSchema} />
+      <StructuredData data={breadcrumbSchema} />
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
       <section className="relative bg-gradient-to-b from-primary/10 via-background to-background py-16 md:py-24">
