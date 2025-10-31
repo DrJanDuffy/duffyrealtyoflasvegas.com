@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
 import { ThemeProvider } from 'next-themes'
-import DeployBanner from '../components/deploy-banner'
+import Script from 'next/script'
 import './globals.css'
 
 const geistSans = Geist({
@@ -15,18 +15,33 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'Simple v0',
-  description: 'The simplest way to use v0 - just prompt and see your app',
+  metadataBase: new URL('https://www.duffyrealtyoflasvegas.com'),
+  title: 'Dr. Jan Duffy - Award Winning Buyer Agent | Beazer Homes Las Vegas',
+  description: 'Dr. Jan Duffy is the Award Winning Buyer Agent for Beazer Homes in Las Vegas. Find your perfect new construction home in Henderson, Las Vegas, Boulder City, and Mesquite.',
+  alternates: {
+    canonical: 'https://www.duffyrealtyoflasvegas.com',
+  },
   openGraph: {
-    title: 'Simple v0',
-    description: 'The simplest way to use v0 - just prompt and see your app',
-    images: ['/og-image.png'],
+    title: 'Dr. Jan Duffy - Award Winning Buyer Agent | Beazer Homes Las Vegas',
+    description: 'Dr. Jan Duffy is the Award Winning Buyer Agent for Beazer Homes in Las Vegas. Find your perfect new construction home in Henderson, Las Vegas, Boulder City, and Mesquite.',
+    url: 'https://www.duffyrealtyoflasvegas.com',
+    siteName: 'Duffy Realty of Las Vegas',
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Dr. Jan Duffy - Award Winning Buyer Agent',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Simple v0',
-    description: 'The simplest way to use v0 - just prompt and see your app',
-    images: ['/og-image.png'],
+    title: 'Dr. Jan Duffy - Award Winning Buyer Agent | Beazer Homes Las Vegas',
+    description: 'Dr. Jan Duffy is the Award Winning Buyer Agent for Beazer Homes in Las Vegas. Find your perfect new construction home in Henderson, Las Vegas, Boulder City, and Mesquite.',
+    images: ['https://www.duffyrealtyoflasvegas.com/og-image.png'],
   },
 }
 
@@ -40,6 +55,19 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        {/* Google tag (gtag.js) */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-1JC6VLTL8P"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-1JC6VLTL8P');
+          `}
+        </Script>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
@@ -47,7 +75,6 @@ export default function RootLayout({
           disableTransitionOnChange
           storageKey="theme"
         >
-          <DeployBanner />
           {children}
         </ThemeProvider>
       </body>
