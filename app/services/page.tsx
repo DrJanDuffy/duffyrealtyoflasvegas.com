@@ -289,6 +289,40 @@ export default function ServicesPage() {
         </div>
       </section>
 
+      {/* FAQ Section */}
+      <section className="py-16 bg-muted/30">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">Frequently Asked Questions</h2>
+            <div className="space-y-6">
+              <div className="bg-card p-6 rounded-lg border border-border">
+                <h3 className="text-xl font-semibold mb-3">What services are included with buyer's agent representation?</h3>
+                <p className="text-muted-foreground">
+                  Buyer's agent services include home search assistance, contract review, negotiation, design guidance, inspection coordination, process management, financing support, and closing coordination—all at no additional cost to you.
+                </p>
+              </div>
+              <div className="bg-card p-6 rounded-lg border border-border">
+                <h3 className="text-xl font-semibold mb-3">Do I need to pay for buyer's agent services?</h3>
+                <p className="text-muted-foreground">
+                  No. Buyer's agent representation comes at no additional cost to you. The real estate commission structure means you get professional representation and advocacy at no extra expense when working with Dr. Jan Duffy.
+                </p>
+              </div>
+              <div className="bg-card p-6 rounded-lg border border-border">
+                <h3 className="text-xl font-semibold mb-3">How does Dr. Jan Duffy help with the new construction process?</h3>
+                <p className="text-muted-foreground">
+                  Dr. Jan Duffy provides comprehensive support throughout the new construction process, including access to inventory and incentives, contract review, design guidance, construction progress coordination, inspection support, and closing assistance.
+                </p>
+              </div>
+            </div>
+            <div className="mt-8 text-center">
+              <Button variant="outline" size="lg" asChild>
+                <a href="/faq">View All Frequently Asked Questions →</a>
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-16 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">

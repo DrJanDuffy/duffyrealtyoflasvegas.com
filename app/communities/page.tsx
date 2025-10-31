@@ -169,6 +169,40 @@ export default function CommunitiesPage() {
         </section>
       )}
 
+      {/* FAQ Section */}
+      <section className="py-16">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">Frequently Asked Questions</h2>
+            <div className="space-y-6">
+              <div className="bg-card p-6 rounded-lg border border-border">
+                <h3 className="text-xl font-semibold mb-3">How many Beazer Homes communities are available?</h3>
+                <p className="text-muted-foreground">
+                  Dr. Jan Duffy represents buyers across 12 Beazer Homes communities in the Las Vegas area, including communities in Henderson, Las Vegas, Boulder City, and Mesquite. Each community offers different floor plans and amenities to suit various lifestyles.
+                </p>
+              </div>
+              <div className="bg-card p-6 rounded-lg border border-border">
+                <h3 className="text-xl font-semibold mb-3">Can I customize a Beazer home?</h3>
+                <p className="text-muted-foreground">
+                  Yes, Beazer Homes offers various customization options depending on the construction stage. You can typically select finishes, colors, and upgrades through their design center. Structural changes are usually limited to early stages of construction.
+                </p>
+              </div>
+              <div className="bg-card p-6 rounded-lg border border-border">
+                <h3 className="text-xl font-semibold mb-3">What should I consider when choosing a Beazer community?</h3>
+                <p className="text-muted-foreground">
+                  Consider factors like location, proximity to work and schools, community amenities, lot size, floor plan options, and future development plans. Dr. Jan Duffy can help you evaluate each community based on your specific needs and preferences.
+                </p>
+              </div>
+            </div>
+            <div className="mt-8 text-center">
+              <Button variant="outline" size="lg" asChild>
+                <a href="/faq">View All Frequently Asked Questions →</a>
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Contact CTA */}
       <section className="py-16 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">

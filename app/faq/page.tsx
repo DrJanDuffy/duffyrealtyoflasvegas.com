@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Button } from '@/components/ui/button'
 import { Phone, Mail, Calendar } from 'lucide-react'
 import Link from 'next/link'
+import { generateFAQPageSchema, generateBreadcrumbSchema } from '@/lib/schema/structured-data'
 
 export const metadata: Metadata = {
   title: 'FAQ: Buying Beazer Homes in Las Vegas | Dr. Jan Duffy',
@@ -122,7 +123,27 @@ export default function FAQPage() {
     },
   ]
 
+  // Flatten FAQs for schema
+  const allFAQs = faqs.flatMap(category => 
+    category.questions.map(q => ({ question: q.q, answer: q.a }))
+  )
+  
+  const faqSchema = generateFAQPageSchema(allFAQs)
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: 'Home', url: 'https://www.duffyrealtyoflasvegas.com' },
+    { name: 'FAQ', url: 'https://www.duffyrealtyoflasvegas.com/faq' },
+  ])
+
   return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
       <section className="relative bg-gradient-to-b from-primary/10 via-background to-background py-16 md:py-24">
@@ -212,6 +233,7 @@ export default function FAQPage() {
         </div>
       </section>
     </div>
+    </>
   )
 }
 

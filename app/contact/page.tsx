@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Button } from '@/components/ui/button'
 import { Phone, Mail, Calendar, MapPin, Clock } from 'lucide-react'
 import Link from 'next/link'
+import { generateLocalBusinessSchema, generateBreadcrumbSchema } from '@/lib/schema/structured-data'
 
 export const metadata: Metadata = {
   title: 'Contact Dr. Jan Duffy | Beazer Homes Buyer Agent Las Vegas',
@@ -18,7 +19,22 @@ export const metadata: Metadata = {
 }
 
 export default function ContactPage() {
+  const localBusinessSchema = generateLocalBusinessSchema()
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: 'Home', url: 'https://www.duffyrealtyoflasvegas.com' },
+    { name: 'Contact', url: 'https://www.duffyrealtyoflasvegas.com/contact' },
+  ])
+
   return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
       <section className="relative bg-gradient-to-b from-primary/10 via-background to-background py-16 md:py-24">
@@ -187,6 +203,40 @@ export default function ContactPage() {
         </div>
       </section>
 
+      {/* FAQ Section */}
+      <section className="py-16 bg-muted/30">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">Frequently Asked Questions</h2>
+            <div className="space-y-6">
+              <div className="bg-card p-6 rounded-lg border border-border">
+                <h3 className="text-xl font-semibold mb-3">What's the best way to contact Dr. Jan Duffy?</h3>
+                <p className="text-muted-foreground">
+                  You can reach Dr. Jan Duffy by phone at (702) 500-1942, email at DrDuffySells@DuffyRealtyOfLasVegas.com, or visit her office at 4670 S Fort Apache Rd, Las Vegas, NV 89147. For urgent matters, you can also call (702) 222-1964.
+                </p>
+              </div>
+              <div className="bg-card p-6 rounded-lg border border-border">
+                <h3 className="text-xl font-semibold mb-3">How quickly will Dr. Jan Duffy respond?</h3>
+                <p className="text-muted-foreground">
+                  Dr. Jan Duffy typically responds to inquiries within 24 hours, often much sooner. For urgent matters, calling directly ensures the fastest response.
+                </p>
+              </div>
+              <div className="bg-card p-6 rounded-lg border border-border">
+                <h3 className="text-xl font-semibold mb-3">Can I schedule a consultation?</h3>
+                <p className="text-muted-foreground">
+                  Yes! You can schedule a consultation by emailing DrDuffySells@DuffyRealtyOfLasVegas.com with "Schedule Consultation" in the subject line, or by calling (702) 500-1942. Consultations can be done in person, over the phone, or via video call.
+                </p>
+              </div>
+            </div>
+            <div className="mt-8 text-center">
+              <Button variant="outline" size="lg" asChild>
+                <a href="/faq">View All Frequently Asked Questions →</a>
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Contact Info Footer */}
       <section className="py-12 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -201,6 +251,7 @@ export default function ContactPage() {
         </div>
       </section>
     </div>
+    </>
   )
 }
 

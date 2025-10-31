@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Button } from '@/components/ui/button'
 import { Phone, Mail, Calendar, Award, MapPin, GraduationCap, Star, Home } from 'lucide-react'
 import Link from 'next/link'
+import { generatePersonSchema, generateBreadcrumbSchema } from '@/lib/schema/structured-data'
 
 export const metadata: Metadata = {
   title: 'About Dr. Jan Duffy | Award Winning Beazer Homes Buyer Agent Las Vegas',
@@ -18,7 +19,22 @@ export const metadata: Metadata = {
 }
 
 export default function AboutPage() {
+  const personSchema = generatePersonSchema()
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: 'Home', url: 'https://www.duffyrealtyoflasvegas.com' },
+    { name: 'About', url: 'https://www.duffyrealtyoflasvegas.com/about' },
+  ])
+
   return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
       <section className="relative bg-gradient-to-b from-primary/10 via-background to-background py-16 md:py-24">
@@ -160,6 +176,40 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* FAQ Section */}
+      <section className="py-16 bg-muted/30">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">Frequently Asked Questions</h2>
+            <div className="space-y-6">
+              <div className="bg-card p-6 rounded-lg border border-border">
+                <h3 className="text-xl font-semibold mb-3">Why should I choose Dr. Jan Duffy as my buyer's agent?</h3>
+                <p className="text-muted-foreground">
+                  Dr. Jan Duffy is an Award Winning Buyer Agent with specialized expertise in Beazer Homes. She has direct relationships with Beazer sales teams, knows all Las Vegas area communities, and provides dedicated advocacy throughout your purchase—all at no additional cost to you.
+                </p>
+              </div>
+              <div className="bg-card p-6 rounded-lg border border-border">
+                <h3 className="text-xl font-semibold mb-3">What areas does Dr. Jan Duffy serve?</h3>
+                <p className="text-muted-foreground">
+                  Dr. Jan Duffy serves all Beazer Homes communities throughout the greater Las Vegas area, including Henderson, Las Vegas, Boulder City, and Mesquite. Her office is located at 4670 S Fort Apache Rd, Las Vegas, NV 89147.
+                </p>
+              </div>
+              <div className="bg-card p-6 rounded-lg border border-border">
+                <h3 className="text-xl font-semibold mb-3">Do I pay extra to work with Dr. Jan Duffy?</h3>
+                <p className="text-muted-foreground">
+                  No. Buyer's agent representation comes at no additional cost to you. The real estate commission structure means you get professional representation and advocacy at no extra expense when working with Dr. Jan Duffy.
+                </p>
+              </div>
+            </div>
+            <div className="mt-8 text-center">
+              <Button variant="outline" size="lg" asChild>
+                <a href="/faq">View All Frequently Asked Questions →</a>
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-16 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -210,6 +260,7 @@ export default function AboutPage() {
         </div>
       </section>
     </div>
+    </>
   )
 }
 

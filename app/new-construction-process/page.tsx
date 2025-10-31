@@ -366,6 +366,40 @@ export default function NewConstructionProcessPage() {
         </div>
       </section>
 
+      {/* FAQ Section */}
+      <section className="py-16 bg-muted/30">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">Frequently Asked Questions</h2>
+            <div className="space-y-6">
+              <div className="bg-card p-6 rounded-lg border border-border">
+                <h3 className="text-xl font-semibold mb-3">What happens if construction is delayed?</h3>
+                <p className="text-muted-foreground">
+                  Delays can happen due to weather, supply chain issues, or other factors. Your purchase contract will outline how delays are handled. Your buyer's agent will communicate with the builder about timelines and help manage expectations throughout the process.
+                </p>
+              </div>
+              <div className="bg-card p-6 rounded-lg border border-border">
+                <h3 className="text-xl font-semibold mb-3">Can I visit my home during construction?</h3>
+                <p className="text-muted-foreground">
+                  Yes, you'll typically have scheduled walkthroughs at key stages: framing, pre-drywall, and final walkthrough before closing. Your buyer's agent will attend walkthroughs with you to ensure quality and address any concerns.
+                </p>
+              </div>
+              <div className="bg-card p-6 rounded-lg border border-border">
+                <h3 className="text-xl font-semibold mb-3">What should I do during the construction phase?</h3>
+                <p className="text-muted-foreground">
+                  Stay in communication with your buyer's agent, attend scheduled walkthroughs, keep your financing on track, and plan for your move-in timeline. Your buyer's agent will coordinate everything and keep you informed of progress.
+                </p>
+              </div>
+            </div>
+            <div className="mt-8 text-center">
+              <Button variant="outline" size="lg" asChild>
+                <a href="/faq">View All Frequently Asked Questions →</a>
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-16 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">

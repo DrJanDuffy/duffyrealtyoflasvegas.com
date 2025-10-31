@@ -230,6 +230,40 @@ export default async function CommunityPage({ params }: Props) {
         </div>
       </section>
 
+      {/* FAQ Section */}
+      <section className="py-16 bg-muted/30">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">Frequently Asked Questions</h2>
+            <div className="space-y-6">
+              <div className="bg-card p-6 rounded-lg border border-border">
+                <h3 className="text-xl font-semibold mb-3">How long does it take to build a home in {community.name}?</h3>
+                <p className="text-muted-foreground">
+                  Construction timelines typically range from 4-8 months, depending on whether the home is already under construction or a standard new build. Quick move-in homes can close in 30-90 days, while standard builds take 4-6 months from contract to closing.
+                </p>
+              </div>
+              <div className="bg-card p-6 rounded-lg border border-border">
+                <h3 className="text-xl font-semibold mb-3">Can I customize a home in {community.name}?</h3>
+                <p className="text-muted-foreground">
+                  Yes, Beazer Homes offers various customization options depending on the construction stage. You can typically select finishes, colors, and upgrades through their design center. Structural changes are usually limited to early stages of construction.
+                </p>
+              </div>
+              <div className="bg-card p-6 rounded-lg border border-border">
+                <h3 className="text-xl font-semibold mb-3">What are the benefits of working with Dr. Jan Duffy?</h3>
+                <p className="text-muted-foreground">
+                  As the Award Winning Buyer Agent for Beazer Homes, Dr. Jan Duffy provides professional representation, contract review, negotiation, and expert guidance throughout your home buying journey—all at no additional cost to you. She has direct access to inventory, pricing, and builder incentives.
+                </p>
+              </div>
+            </div>
+            <div className="mt-8 text-center">
+              <Button variant="outline" size="lg" asChild>
+                <a href="/faq">View All Frequently Asked Questions →</a>
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Contact CTA */}
       <section className="py-16 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">

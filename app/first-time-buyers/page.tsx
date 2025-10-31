@@ -365,6 +365,40 @@ export default function FirstTimeBuyersPage() {
         </div>
       </section>
 
+      {/* FAQ Section */}
+      <section className="py-16 bg-muted/30">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">Frequently Asked Questions</h2>
+            <div className="space-y-6">
+              <div className="bg-card p-6 rounded-lg border border-border">
+                <h3 className="text-xl font-semibold mb-3">How much down payment do I need for a first home?</h3>
+                <p className="text-muted-foreground">
+                  Down payment requirements vary by loan type. FHA loans require 3.5% minimum, conventional loans can be as low as 3% for qualified first-time buyers, and VA loans offer 0% down for eligible veterans. Dr. Jan Duffy can connect you with lenders experienced in first-time buyer programs.
+                </p>
+              </div>
+              <div className="bg-card p-6 rounded-lg border border-border">
+                <h3 className="text-xl font-semibold mb-3">Is new construction a good choice for first-time buyers?</h3>
+                <p className="text-muted-foreground">
+                  Yes! New construction is excellent for first-time buyers because everything is brand new with warranties, modern energy-efficient features, and no immediate repair needs. However, you'll need to plan for the 4-8 month construction timeline.
+                </p>
+              </div>
+              <div className="bg-card p-6 rounded-lg border border-border">
+                <h3 className="text-xl font-semibold mb-3">What help is available for first-time homebuyers?</h3>
+                <p className="text-muted-foreground">
+                  There are various first-time buyer programs, down payment assistance options, and specialized loan programs available. Dr. Jan Duffy can connect you with lenders who specialize in first-time buyer programs and help you explore all available options.
+                </p>
+              </div>
+            </div>
+            <div className="mt-8 text-center">
+              <Button variant="outline" size="lg" asChild>
+                <a href="/faq">View All Frequently Asked Questions →</a>
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-16 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">

@@ -237,6 +237,40 @@ export default async function LocationPage({ params }: Props) {
         </div>
       </section>
 
+      {/* FAQ Section */}
+      <section className="py-16 bg-muted/30">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">Frequently Asked Questions</h2>
+            <div className="space-y-6">
+              <div className="bg-card p-6 rounded-lg border border-border">
+                <h3 className="text-xl font-semibold mb-3">What Beazer Homes communities are available in {locationData.name}?</h3>
+                <p className="text-muted-foreground">
+                  Dr. Jan Duffy represents buyers across multiple Beazer Homes communities in {locationData.name}. Each community offers different floor plans, amenities, and price points. Contact Dr. Jan Duffy to learn about current availability in {locationData.name} communities.
+                </p>
+              </div>
+              <div className="bg-card p-6 rounded-lg border border-border">
+                <h3 className="text-xl font-semibold mb-3">Why choose {locationData.name} for your new home?</h3>
+                <p className="text-muted-foreground">
+                  {locationData.name} offers {locationData.highlights[0].toLowerCase()} and {locationData.highlights[1].toLowerCase()}, making it an attractive place to live. Dr. Jan Duffy can help you understand the benefits of living in {locationData.name} and find the perfect Beazer community for your needs.
+                </p>
+              </div>
+              <div className="bg-card p-6 rounded-lg border border-border">
+                <h3 className="text-xl font-semibold mb-3">How do I get started looking for a home in {locationData.name}?</h3>
+                <p className="text-muted-foreground">
+                  Contact Dr. Jan Duffy at (702) 500-1942 or email DrDuffySells@DuffyRealtyOfLasVegas.com to schedule a consultation. She'll help you explore Beazer Homes communities in {locationData.name} and guide you through the entire home buying process.
+                </p>
+              </div>
+            </div>
+            <div className="mt-8 text-center">
+              <Button variant="outline" size="lg" asChild>
+                <a href="/faq">View All Frequently Asked Questions →</a>
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-16 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">

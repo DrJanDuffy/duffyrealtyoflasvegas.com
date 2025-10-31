@@ -3,9 +3,32 @@
 import { Button } from '@/components/ui/button'
 import { Phone, Mail, Calendar, Award, Home, Users, MapPin } from 'lucide-react'
 import Image from 'next/image'
+import { generateOrganizationSchema, generatePersonSchema, generateRealEstateAgentSchema, generateLocalBusinessSchema } from '@/lib/schema/structured-data'
 
 export default function HomePage() {
+  const organizationSchema = generateOrganizationSchema()
+  const personSchema = generatePersonSchema()
+  const realEstateAgentSchema = generateRealEstateAgentSchema()
+  const localBusinessSchema = generateLocalBusinessSchema()
+
   return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(realEstateAgentSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+      />
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
       <section className="relative bg-gradient-to-b from-primary/10 via-background to-background py-20 md:py-32">
@@ -325,6 +348,40 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* FAQ Section */}
+      <section className="py-16 bg-muted/30">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">Frequently Asked Questions</h2>
+            <div className="space-y-6">
+              <div className="bg-card p-6 rounded-lg border border-border">
+                <h3 className="text-xl font-semibold mb-3">Do I need a buyer's agent to buy a Beazer home?</h3>
+                <p className="text-muted-foreground">
+                  While not required, working with a buyer's agent like Dr. Jan Duffy provides significant benefits at no additional cost to you. You get professional representation, contract review, negotiation, and expert guidance throughout your home buying journey.
+                </p>
+              </div>
+              <div className="bg-card p-6 rounded-lg border border-border">
+                <h3 className="text-xl font-semibold mb-3">How long does it take to build a new Beazer home?</h3>
+                <p className="text-muted-foreground">
+                  Construction timelines typically range from 4-8 months, depending on whether the home is already under construction or a standard new build. Quick move-in homes can close in 30-90 days, while standard builds take 4-6 months from contract to closing.
+                </p>
+              </div>
+              <div className="bg-card p-6 rounded-lg border border-border">
+                <h3 className="text-xl font-semibold mb-3">What areas does Dr. Jan Duffy serve?</h3>
+                <p className="text-muted-foreground">
+                  Dr. Jan Duffy serves all Beazer Homes communities throughout the greater Las Vegas area, including Henderson, Las Vegas, Boulder City, and Mesquite. Her office is located at 4670 S Fort Apache Rd, Las Vegas, NV 89147.
+                </p>
+              </div>
+            </div>
+            <div className="mt-8 text-center">
+              <Button variant="outline" size="lg" asChild>
+                <a href="/faq">View All Frequently Asked Questions →</a>
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Contact CTA Section */}
       <section id="contact" className="py-20 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -460,5 +517,6 @@ export default function HomePage() {
         </div>
       </section>
     </div>
+    </>
   )
 }

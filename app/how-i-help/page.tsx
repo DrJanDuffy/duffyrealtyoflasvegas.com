@@ -352,6 +352,40 @@ export default function HowIHelpPage() {
         </div>
       </section>
 
+      {/* FAQ Section */}
+      <section className="py-16 bg-muted/30">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">Frequently Asked Questions</h2>
+            <div className="space-y-6">
+              <div className="bg-card p-6 rounded-lg border border-border">
+                <h3 className="text-xl font-semibold mb-3">What is a buyer's agent and why do I need one?</h3>
+                <p className="text-muted-foreground">
+                  A buyer's agent is a licensed real estate professional who represents your interests throughout the home buying process. Unlike the builder's sales team, who work for the builder, a buyer's agent works exclusively for you, providing advocacy, contract review, negotiation, and expert guidance—all at no additional cost to you.
+                </p>
+              </div>
+              <div className="bg-card p-6 rounded-lg border border-border">
+                <h3 className="text-xl font-semibold mb-3">Do I pay extra to work with a buyer's agent?</h3>
+                <p className="text-muted-foreground">
+                  No. The real estate commission structure means buyer's agent representation comes at no additional cost to you. The commission splits happen on the builder's side regardless of whether you work with an agent. By working with Dr. Jan Duffy, you get professional representation and advocacy at no extra expense.
+                </p>
+              </div>
+              <div className="bg-card p-6 rounded-lg border border-border">
+                <h3 className="text-xl font-semibold mb-3">What if I already started working with the builder's sales team?</h3>
+                <p className="text-muted-foreground">
+                  In many cases, you can still bring in a buyer's agent even if you've already been working with the builder's sales team. Contact Dr. Jan Duffy immediately—the sooner she's involved, the better she can help you. She can step in to provide representation and ensure your interests are protected.
+                </p>
+              </div>
+            </div>
+            <div className="mt-8 text-center">
+              <Button variant="outline" size="lg" asChild>
+                <a href="/faq">View All Frequently Asked Questions →</a>
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Contact Footer */}
       <section className="py-16 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
