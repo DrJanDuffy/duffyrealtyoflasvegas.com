@@ -287,6 +287,11 @@ export default function HomePage() {
                 </p>
               </div>
             </div>
+            <div className="text-center mt-8">
+              <Button size="lg" variant="outline" asChild>
+                <a href="/how-i-help">Learn How I Help as Your Buyer's Agent</a>
+              </Button>
+            </div>
           </div>
         </div>
       </section>
@@ -382,6 +387,74 @@ export default function HomePage() {
                   Direct: (702) 500-1942
                 </a>
               </p>
+            </div>
+            
+            {/* Footer Navigation */}
+            <div className="mt-12 pt-12 border-t border-primary-foreground/20">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-sm">
+                <div>
+                  <h3 className="font-semibold mb-3">About</h3>
+                  <ul className="space-y-2 opacity-80">
+                    <li>
+                      <a href="/about" className="hover:underline">About Dr. Jan Duffy</a>
+                    </li>
+                    <li>
+                      <a href="/how-i-help" className="hover:underline">How I Help</a>
+                    </li>
+                    <li>
+                      <a href="/services" className="hover:underline">Services</a>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <h3 className="font-semibold mb-3">Communities</h3>
+                  <ul className="space-y-2 opacity-80">
+                    <li>
+                      <a href="/communities" className="hover:underline">All Communities</a>
+                    </li>
+                    <li>
+                      <a href="/areas/henderson" className="hover:underline">Henderson</a>
+                    </li>
+                    <li>
+                      <a href="/areas/las-vegas" className="hover:underline">Las Vegas</a>
+                    </li>
+                    <li>
+                      <a href="/areas/boulder-city" className="hover:underline">Boulder City</a>
+                    </li>
+                    <li>
+                      <a href="/areas/mesquite" className="hover:underline">Mesquite</a>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <h3 className="font-semibold mb-3">Resources</h3>
+                  <ul className="space-y-2 opacity-80">
+                    <li>
+                      <a href="/buyers-guide" className="hover:underline">Buyer's Guide</a>
+                    </li>
+                    <li>
+                      <a href="/first-time-buyers" className="hover:underline">First-Time Buyers</a>
+                    </li>
+                    <li>
+                      <a href="/new-construction-process" className="hover:underline">New Construction Process</a>
+                    </li>
+                    <li>
+                      <a href="/faq" className="hover:underline">FAQ</a>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <h3 className="font-semibold mb-3">Contact</h3>
+                  <ul className="space-y-2 opacity-80">
+                    <li>
+                      <a href="/contact" className="hover:underline">Contact Page</a>
+                    </li>
+                    <li>
+                      <a href="/privacy" className="hover:underline">Privacy Policy</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
         </div>

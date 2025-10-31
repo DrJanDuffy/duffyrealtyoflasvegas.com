@@ -219,6 +219,61 @@ export default function CommunitiesPage() {
           </div>
         </div>
       </section>
+
+      {/* Helpful Resources */}
+      <section className="py-16 bg-muted/30">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold mb-8 text-center">Helpful Resources</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="bg-card p-6 rounded-lg border border-border">
+                <h3 className="text-xl font-semibold mb-3">New to Buying?</h3>
+                <p className="text-muted-foreground mb-4">
+                  Learn about the new construction home buying process and what to expect.
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  <a href="/buyers-guide" className="text-primary hover:underline text-sm">Buyer's Guide →</a>
+                  <a href="/first-time-buyers" className="text-primary hover:underline text-sm">First-Time Buyers →</a>
+                  <a href="/new-construction-process" className="text-primary hover:underline text-sm">Process Timeline →</a>
+                </div>
+              </div>
+              <div className="bg-card p-6 rounded-lg border border-border">
+                <h3 className="text-xl font-semibold mb-3">Explore by Location</h3>
+                <p className="text-muted-foreground mb-4">
+                  Learn about Beazer Homes communities in specific areas.
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  <a href="/areas/henderson" className="text-primary hover:underline text-sm">Henderson →</a>
+                  <a href="/areas/las-vegas" className="text-primary hover:underline text-sm">Las Vegas →</a>
+                  <a href="/areas/boulder-city" className="text-primary hover:underline text-sm">Boulder City →</a>
+                  <a href="/areas/mesquite" className="text-primary hover:underline text-sm">Mesquite →</a>
+                </div>
+              </div>
+              <div className="bg-card p-6 rounded-lg border border-border">
+                <h3 className="text-xl font-semibold mb-3">How I Help</h3>
+                <p className="text-muted-foreground mb-4">
+                  Discover the services and expertise I provide as your buyer's agent.
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  <a href="/how-i-help" className="text-primary hover:underline text-sm">How I Help →</a>
+                  <a href="/services" className="text-primary hover:underline text-sm">Services →</a>
+                  <a href="/about" className="text-primary hover:underline text-sm">About Dr. Jan Duffy →</a>
+                </div>
+              </div>
+              <div className="bg-card p-6 rounded-lg border border-border">
+                <h3 className="text-xl font-semibold mb-3">Questions?</h3>
+                <p className="text-muted-foreground mb-4">
+                  Find answers to common questions or get in touch directly.
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  <a href="/faq" className="text-primary hover:underline text-sm">FAQ →</a>
+                  <a href="/contact" className="text-primary hover:underline text-sm">Contact →</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   )
 }
