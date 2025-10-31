@@ -21,6 +21,10 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://www.duffyrealtyoflasvegas.com',
   },
+  verification: {
+    // Add your Google Search Console verification code here when you verify your site
+    // Example: google: 'your-verification-code-here'
+  },
   openGraph: {
     title: 'Dr. Jan Duffy - Award Winning Buyer Agent | Beazer Homes Las Vegas',
     description: 'Dr. Jan Duffy is the Award Winning Buyer Agent for Beazer Homes in Las Vegas. Find your perfect new construction home in Henderson, Las Vegas, Boulder City, and Mesquite.',
